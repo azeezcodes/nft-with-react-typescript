@@ -13,7 +13,7 @@ interface Props {
 const BasicModal = ({image, name, owner, price, descri, source}: Props) => {
   return (
      <div>
-        <div className="flex gap-8">
+        <div className="flex gap-8 ">
            <img
               src={image}
               alt=""

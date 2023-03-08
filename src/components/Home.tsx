@@ -18,18 +18,7 @@ interface datatype {
    desc?: string;
 }
 
-const style = {
-   position: "absolute" as "absolute",
-   top: "50%",
-   left: "50%",
-   transform: "translate(-50%, -50%)",
-   width: 800,
-   height: 600,
-   bgcolor: "background.paper",
-   boxShadow: 24,
-   p: 4,
-   border: 'none'
-};
+
 
 const Home = (props: Props) => {
    const [open, setOpen] = React.useState(false);
@@ -80,7 +69,20 @@ const Home = (props: Props) => {
                      aria-labelledby="modal-modal-title"
                      aria-describedby="modal-modal-description"
                   >
-                     <Box sx={style}>
+                     <Box
+                     className="h-fit"
+                        sx={{
+                           position: "absolute" as "absolute",
+                           top: "50%",
+                           left: "50%",
+                           transform: "translate(-50%, -50%)",
+                           width: { md: "800px", lg: "800px", xs: "400px" },                  
+                           bgcolor: "background.paper",
+                           boxShadow: 24,
+                           p: 4,
+                           border: "none",
+                        }}
+                     >
                         <BasicModal
                            image={current?.img}
                            name={current?.name}
@@ -88,7 +90,6 @@ const Home = (props: Props) => {
                            price={current?.price}
                            descri={current?.desc}
                            source={current?.link}
-
                         />
                      </Box>
                   </Modal>
